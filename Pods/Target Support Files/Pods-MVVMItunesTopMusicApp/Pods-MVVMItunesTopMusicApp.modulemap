@@ -1,0 +1,6 @@
+framework module Pods_MVVMItunesTopMusicApp {
+  umbrella header "Pods-MVVMItunesTopMusicApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

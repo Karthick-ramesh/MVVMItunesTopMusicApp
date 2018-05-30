@@ -1,0 +1,6 @@
+framework module Pods_MVVMItunesTopMusicAppTests {
+  umbrella header "Pods-MVVMItunesTopMusicAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

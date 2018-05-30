@@ -75,7 +75,7 @@ class TopMusicViewModel:TopMusicProtocol,NetworkManager{
                         self.topMusicResponse = try JSONDecoder().decode(TopMusicApiResponse.self, from: responseData)
                         
                         self.topMusicItems = self.topMusicResponse?.musicItems.map(){data in
-                            TopMusicItemViewModel(name: data.name, title: data.title, coverArt: data.albumCoverImage[0])
+                            TopMusicItemViewModel(name: data.name, title: data.title, coverArt: data.albumCoverImage[2])
                         };
                         completion(self.topMusicItems,nil)
                     }catch {

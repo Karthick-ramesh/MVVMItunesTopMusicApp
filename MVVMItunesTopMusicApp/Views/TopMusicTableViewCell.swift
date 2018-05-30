@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TopMusicTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var coverArtImage: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
@@ -26,6 +28,8 @@ class TopMusicTableViewCell: UITableViewCell {
     func config(viewModelPresentable:TopMusicItemViewModel){
         titleLbl.text = viewModelPresentable.musicTitle ?? ""
         nameLbl.text = viewModelPresentable.musicName ?? ""
+        coverArtImage.kf.setImage(with: viewModelPresentable.coverArtImageUrl)
+        
     }
     
 }
